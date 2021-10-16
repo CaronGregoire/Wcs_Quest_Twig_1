@@ -11,6 +11,15 @@
 <body>
     <h1>Hello {{ name }} !</h1>
 
+    <h2>Produits</h2>
 
+    {% for key, product in products %}
+        {{ product }}
+        {% if loop.index == 3 %}
+        </br>
+    {% endif %}
+    {% endfor %}
+
+    {{ dump(products) }}
 </body>
 </html>
